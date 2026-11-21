@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TEA HOUSE</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <div class="logo">tea-holic</div>
+
+    <nav>
+        <a href="#">Главная</a>
+        <a href="#products">Каталог</a>
+        <a href="tel:+380997834567">Контакты</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <h1>tea-holic приветствует вас</h1>
+    <p>Открой для себя настоящий вкус китайских традиций</p>
+    <a href="#products" class="button">Смотреть каталог</a>
+</section>
+
+<section class="products" id="products">
+
+    <h2>Наш чай</h2>
+
+    <div class="cards">
+
+        <div class="card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqbYzgmIXZ9MRfXnQqk2O7R43ZxR03mqiURFVfJ4lChA&s=10">
+            <h3>Да Хун Пао</h3>
+            <p>Знаменитый китайский улун со вкусом тёмного чоколада и лёгкими нотками древесной коры</p>
+            <div class="price">155 грн / 50 г</div>
+            <a href="#contacts" class="button">Заказать</a>
+        </div>
+
+        <div class="card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_REF9mjB1YRurjyjoz7RoBeOVWL0R_ebJZRntAkGHYg&s">
+            <h3>Габа улун</h3>
+            <p>Особенный улун с мягким вкусом и розслабляюшим ефектом</p>
+            <div class="price">455 грн / 50 г</div>
+            <a href="#contacts" class="button">Заказать</a>
+        </div>
+
+        <div class="card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJokuv-H4jQPGtjCWHbP84eMmk5QWPmXq6hzy-tKwFWw&s=10">
+            <h3>Шу Пуэр</h3>
+            <p>Насыщенный китайский чай с ароматом древесной коры</p>
+            <div class="price">135 грн / 50 г</div>
+            <a href="#contacts" class="button">Заказать</a>
+        </div>
+
+    </div>
+</section>
+
+<footer id="contacts"> 
+    <p>tea-holic © 2026</p>
+    <p>Настоящий китайский чай</p>
+    <p>Телефон: <a href="tel:+380997834567">+380997834567</a></p>
+</footer>
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Оформление заказа — tea-holic</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <div class="logo">tea-holic</div>
+    <nav>
+        <a href="index.html">Главная</a>
+    </nav>
+</header>
+
+<section class="order">
+
+    <h1>Оформление заказа</h1>
+    <p>Заполните данные для оформления заказа</p>
+
+    <form id="orderForm">
+
+        <label>Выбранный чай</label>
+        <input type="text" id="product" readonly>
+
+        <label>ФИО</label>
+        <input type="text" placeholder="Введите ваше ФИО" required>
+
+        <label>Номер телефона</label>
+        <input type="tel" placeholder="+380..." required>
+
+        <label>Электронная почта</label>
+        <input type="email" placeholder="example@gmail.com" required>
+
+        <button type="submit" class="button">
+            Оформить заказ
+        </button>
+
+    </form>
+
+    <p id="message"></p>
+
+</section>
+
+<script>
+    const params = new URLSearchParams(window.location.search);
+
+    document.getElementById("product").value =
+        params.get("product") || "Не выбран";
+
+    document.getElementById("orderForm").addEventListener("submit", function(event) {
+        event.preventDefault();
+
+        document.getElementById("message").textContent =
+            "Спасибо! Форма заполнена. Заказ пока не отправлен.";
+
+        this.reset();
+    });
+</script>
+
+</body>
+</html>
+```

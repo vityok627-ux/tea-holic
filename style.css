@@ -1,0 +1,183 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #11130f;
+    color: #eee;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 8%;
+    background: #191d17;
+}
+
+.logo {
+    font-size: 26px;
+    color: #c9a45c;
+    font-weight: bold;
+}
+
+nav a {
+    color: #ddd;
+    text-decoration: none;
+    margin-left: 25px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #c9a45c;
+}
+
+.hero {
+    text-align: center;
+    padding: 130px 20px;
+    background: linear-gradient(#0008, #000b),
+    url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwhc9KZmGUMP1n-NoFNDB11zkiMQkV3fWusDYykuhY6A&s=10");
+    background-size: cover;
+    background-position: center;
+}
+
+.hero h1 {
+    font-size: 55px;
+    color: #d5b16c;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.button {
+    display: inline-block;
+    background: #c9a45c;
+    color: #111;
+    padding: 14px 30px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.button:hover {
+    background: #e4c47e;
+    transform: scale(1.05);
+}
+
+.products {
+    padding: 70px 8%;
+    text-align: center;
+}
+
+.products h2 {
+    font-size: 35px;
+    color: #c9a45c;
+    margin-bottom: 45px;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.card {
+    background: #1c211a;
+    width: 270px;
+    padding: 20px;
+    border-radius: 12px;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.card h3 {
+    color: #d5b16c;
+    margin: 18px 0 10px;
+}
+
+.card p {
+    color: #aaa;
+    margin-bottom: 15px;
+}
+
+.price {
+    font-size: 20px;
+    color: #d5b16c;
+    margin-bottom: 20px;
+}
+
+footer {
+    text-align: center;
+    padding: 30px;
+    background: #191d17;
+    color: #888;
+}
+
+.order {
+    max-width: 500px;
+    margin: 70px auto;
+    padding: 35px;
+    background: #1c211a;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.order h1 {
+    color: #d5b16c;
+    margin-bottom: 15px;
+}
+
+.order p {
+    color: #aaa;
+    margin-bottom: 25px;
+}
+
+.order form {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.order label {
+    color: #d5b16c;
+    margin: 12px 0 7px;
+}
+
+.order input {
+    padding: 13px;
+    border: 1px solid #444;
+    border-radius: 6px;
+    background: #11130f;
+    color: white;
+    font-size: 16px;
+}
+
+.order button {
+    margin-top: 25px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#message {
+    margin-top: 20px;
+    color: #d5b16c;
+}
